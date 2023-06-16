@@ -1,24 +1,39 @@
-# README
+# DB 設計
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## users table
 
-Things you may want to cover:
+| Column             | Type                | Options                   |
+|--------------------|---------------------|---------------------------|
+| nickname           | string              | null: false,              |
+| email              | string              | null: false,unique: true  |
+| password           | string              | null: false               |
+| height             | integer              | null: false               |
+| weight             | integer              | null: false               |
+| age                | integer              | null: false               |
+| sex                | integer              | null: false               |
 
-* Ruby version
 
-* System dependencies
 
-* Configuration
+### Association
 
-* Database creation
+* has_many :diets
 
-* Database initialization
 
-* How to run the test suite
+## diets table
 
-* Services (job queues, cache servers, search engines, etc.)
+| Column                              | Type       | Options                        |
+|-------------------------------------|------------|--------------------------------|
+| breakfast-cal                       | integer    | null: false                    |
+| lunch-cal                           | integer    | null: false                    |
+| dinner-cal                          | integer    | null: false                    |
+| snack-cal                           | integer    | null: false                    |
+| motion-cal                          | integer    | null: false                    |
+| date                                | integer    | null: false                    |
+| metabo                              | integer    | null: false                    |
+| total-cal                           | integer    | null: false                    |
+| user                                | references | null: false, foreign_key: true |
 
-* Deployment instructions
+### Association
 
-* ...
+- belongs_to :user
+
