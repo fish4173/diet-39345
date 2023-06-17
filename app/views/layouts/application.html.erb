@@ -10,6 +10,26 @@
   </head>
 
   <body>
+
+    <header class="header">
+      <div class="header__bar row">
+        <h1 class="grid-6"><a href="/">Diet Calculation</a></h1>
+        <% if user_signed_in? %>
+          <div class="user_nav grid-6">
+           <%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout"%> </li>
+          </div>
+        <%else%>
+          <div class="user_nav grid-6">
+            <%# <a class="post" href="/">テスト</a> %>
+          </div>
+        <%end%>
+      </div>
+    </header>
     <%= yield %>
+    <footer>
+      <p>
+        Copyright Diet Calculation 2023.
+      </p>
+    </footer>
   </body>
 </html>
