@@ -7,20 +7,25 @@
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%# <script src="index.js"></script> %>
+     <%# <script type="text/javascript" src="/index.js"></script> %>
+
   </head>
 
   <body>
 
     <header class="header">
-      <div class="header__bar row">
+      <div class="header_bar row">
         <h1 class="grid-6"><a href="/">Diet Calculation</a></h1>
         <% if user_signed_in? %>
-          <div class="user_nav grid-6">
-           <%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout"%> </li>
+          <div class="header-navi">
+            <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout"%> </li>
           </div>
         <%else%>
-          <div class="user_nav grid-6">
-            <%# <a class="post" href="/">テスト</a> %>
+          <div class="header-navi">
+             <li><%= link_to 'ログイン', new_user_session_path, class: "login" %></li>
+             <%= link_to '新規登録', new_user_registration_path, class: "sign-up" %></li>
+
           </div>
         <%end%>
       </div>

@@ -1,0 +1,140 @@
+<%# <%= render "header"%>
+<div class="wrapper">
+    <div class="side-bar">
+      <div class="image-area">
+        <%= image_tag '/assets/ダイエット初期.jpg', alt: 'テスト画像', class: 'image' %>
+      </div>
+      <div class="kcal-answer"></div>
+        <div class="kcal-basic" id="keisan">
+          <span>基礎代謝：</span>
+          <%=@keisan%>
+          <span>kcal</span>
+        </div>
+
+        <div class="kcal-total">
+          <%# <span>本日のカロリー合計(運動量含む)：</span> %>
+            <% if @diet %>
+              <%# <%= @diet.breakfast_cal %>
+              <p>本日のカロリー合計(運動量含む): <%= @diet.total_cal %> kcal</p>
+            <% else %>
+              <p>本日のカロリー合計(運動量含む): 0 kcal</p>
+            <% end %>
+        </div>
+
+        <div class="kcal-total-kg">
+          <%# データが存在するかどうかの判断 %>
+          <% if @diet %>
+            <%# プラスとマイナスの判断 %>
+            <% if @diet.total_kg.positive? %>
+              <p>本日の体重増減: <span class="positive">+</span><span class="positive"><%= @diet.total_kg %> kg</span></p>
+            <% else %>
+              <p>本日の体重増減: <span class="negative">-</span><span class="negative"><%= @diet.total_kg %> kg</span></p>
+            <% end %>
+          <% else %>
+            <p>本日の体重増減: 0 kg</p>
+          <% end %>
+        </div>
+
+
+        <%# 基礎代謝を計算するためにuserから取得(非表示) %>
+        <div class ="basal metabolism">
+          <div class="height-kcal">
+            <span><% current_user.height %>
+          </div>
+          <div class="weight-kcal">
+            <span><% current_user.weight %>
+          </div>
+          <div class="age-kcal">
+            <span><% current_user.age %>
+          </div>
+          <div class="sex-kcal">
+            <span><% current_user.sex %>
+          </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="right-area">
+      <%= form_with model: @diet_kcal,local: true do |f| %>
+          <%= render 'shared/error_messages', model: f.object %>
+
+          <div class='kcal-group'>
+            <div class='kcal-input-form'>
+              <label class="form-text">Breakfast</label>
+              <span class="indispensable">必須</span>
+            </div>
+            <%= f.text_field :breakfast_cal, class:"input-default", id:"breakfast", placeholder:"1234", maxlength: "5",size: "5" , value: 0 %>
+          </div>
+
+          <div class='kcal-group'>
+            <div class='kcal-input-form'>
+              <label class="form-text">Lunch</label>
+              <span class="indispensable">必須</span>
+            </div>
+            <%= f.text_field :lunch_cal, class:"input-default", id:"lunch", placeholder:"1234", maxlength:"5" , value: 0 %>
+          </div>
+
+          <div class='kcal-group'>
+            <div class='kcal-input-form'>
+              <label class="form-text">dinner</label>
+              <span class="indispensable">必須</span>
+            </div>
+            <%= f.text_field :dinner_cal, class:"input-default", id:"dinner", placeholder:"1234", maxlength:"5" , value: 0 %>
+          </div>
+
+          <div class='kcal-group'>
+            <div class='kcal-input-form'>
+              <label class="form-text">snack</label>
+              <span class="indispensable">必須</span>
+            </div>
+            <%= f.text_field :snack_cal, class:"input-default", id:"snack", placeholder:"1234", maxlength:"5" , value: 0 %>
+          </div>
+
+          <div class='kcal-group'>
+            <div class='kcal-input-form'>
+              <label class="form-text">motion</label>
+              <span class="indispensable">必須</span>
+            </div>
+            <%= f.text_field :motion_cal, class:"input-default", id:"motion", placeholder:"1234", maxlength:"5" , value: 0 %>
+          </div>
+
+          <div class='kcal-group'>
+            <div class='kcal-input-form'>
+              <label class="form-text">date</label>
+              <span class="indispensable">必須</span>
+            </div>
+            <%= f.date_field :date, class:"input-default", id:"date",value: Date.today %>
+          </div>
+
+          <div class='kcal-group'>
+            <div class='kcal-input-form'>
+            </div>
+            <%= f.hidden_field :metabo, class:"input-default", id:"metabo",value: @keisan.to_s, placeholder:"1234", maxlength:"5" %>
+          </div>
+
+          <div class='kcal-group'>
+            <div class='kcal-input-form'>
+            </div>
+            <%= f.hidden_field :total_cal, class:"input-default", id:"total_cal", placeholder:"1234", maxlength:"5" , value: 0 %>
+          </div>
+
+          <div class='kcal-group'>
+            <div class='kcal-input-form'>
+            </div>
+            <%= f.hidden_field :total_kg, class:"input-default", id:"total_kg", placeholder:"1234", maxlength:"5" , value: 0 %>
+          </div>
+
+
+
+          <div class='buy-btn'>
+          <%= f.submit "登録" ,class:"buy-red-btn", id:"button" %>
+          </div>
+
+
+
+        <% end %>
+      </div>
+</div>
+

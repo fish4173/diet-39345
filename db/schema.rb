@@ -10,12 +10,28 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_06_16_052004) do
+ActiveRecord::Schema.define(version: 2023_06_17_024116) do
+
+  create_table "diets", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.integer "breakfast_cal", null: false
+    t.integer "lunch_cal", null: false
+    t.integer "dinner_cal", null: false
+    t.integer "snack_cal", null: false
+    t.integer "motion_cal", null: false
+    t.date "date", null: false
+    t.integer "metabo", null: false
+    t.integer "total_cal", null: false
+    t.integer "total_kg", null: false
+    t.bigint "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_diets_on_user_id"
+  end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "nickname", null: false
     t.string "email", null: false
-    t.string "password", null: false
+    t.string "encrypted_password", null: false
     t.integer "height", null: false
     t.integer "weight", null: false
     t.integer "age", null: false
@@ -29,4 +45,5 @@ ActiveRecord::Schema.define(version: 2023_06_16_052004) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "diets", "users"
 end

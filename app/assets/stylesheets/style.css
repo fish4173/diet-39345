@@ -747,9 +747,7 @@ header.header {
   height: 62px;
 }
 
-header.header div.header__bar.row {
-  position: relative;
-}
+
 
 header.header div.header__bar.row h1.grid-6 {
   font-size: 20px;
@@ -983,7 +981,7 @@ div.contents.row .success h3 {
   margin: 10px auto;
 }
 
-form input,
+
 form textarea {
   width: 100%;
   margin: 5px 0 15px;
@@ -1056,4 +1054,109 @@ footer p {
 
 .search-form .search-btn {
   width: 10%;
+}
+
+
+/* **************メイン*********** */
+
+.wrapper {
+  display: flex;
+}
+.side-bar {
+  background-color: white;
+  width: 1000px;
+  height:100vh;
+  margin-left: 200px;
+  border: 0.1px solid gray;
+}
+
+.image-area {
+  background-color: white;
+  border:0.25px solid  #0000;
+  max-width: 100%;
+  max-height: 90%;
+  padding: 10px,0;
+}
+
+.image {
+  width: 100%;
+  height: 90%;
+  padding: 5px;
+  object-fit: contain;
+}
+
+.kcal-answer{
+  border: 0.1px solid gray;
+
+}
+
+.kcal-basic{
+  margin: 10px;
+  font-size: 30px;
+}
+
+.kcal-total{
+  margin: 10px;
+  font-size: 30px;
+}
+.kcal-total-kg{
+  margin: 10px;
+  font-size: 30px;
+}
+
+.right-area {
+  background-color: #FFFFFF;
+  width: calc(100vw - 900px);
+  height: 100vh;
+  border: 0.1px solid gray;
+  margin-right: 200px;
+}
+
+.positive {
+  color: red;
+}
+
+.negative {
+  color: blue;
+}
+
+
+
+.kcal-group{
+  margin: 40px;
+}
+
+
+
+/* ヘッダー */
+
+header_bar row{
+display: flex;
+align-items: center;
+
+}
+
+
+
+.header-navi{
+  display: flex;
+  align-items: center;
+
+}
+
+
+li {
+  display: flex;
+  list-style: none;
+}
+
+
+form input,
+form textarea {
+  width: 100%;
+  margin: 5px 0 15px;
+  padding: 10px;
+  border: 1px solid #D8D8D8;
+  border-radius: 5px;
+  font-family: "游ゴシック", "YuGothic";
 }
