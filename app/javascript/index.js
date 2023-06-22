@@ -19,8 +19,8 @@ window.addEventListener('load', function(){
       const snack = parseFloat(snackField.value) || 0;
       const motion = parseFloat(motionField.value) || 0;
       const totalCal = (breakfast + lunch + dinner + snack - motion)-metabo;
-      const totalKg = Math.floor(totalCal / 7700);
-
+      // const totalKg = Math.floor(totalCal / 7700);
+      const totalKg = totalCal / 7700;
       totalCalField.value = totalCal;
       totalKgField.value = totalKg;
     }

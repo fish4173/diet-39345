@@ -9,7 +9,7 @@ class CreateDiets < ActiveRecord::Migration[6.0]
       t.date :date, null: false
       t.integer :metabo, null: false
       t.integer :total_cal, null: false
-      t.integer :total_kg, null: false
+      t.decimal    :total_kg, precision: 5, scale:2 , null: false
       t.references :user, null: false, foreign_key: true
 
       t.timestamps

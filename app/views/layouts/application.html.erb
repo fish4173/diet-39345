@@ -20,14 +20,18 @@
         <% if user_signed_in? %>
           <div class="header-navi">
             <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout"%> </li>
+            <li><%= link_to "ユーザー編集",edit_user_path(current_user), class: "user-edit"%></li>
           </div>
-        <%else%>
+        <% else %>
           <div class="header-navi">
-             <li><%= link_to 'ログイン', new_user_session_path, class: "login" %></li>
-             <%= link_to '新規登録', new_user_registration_path, class: "sign-up" %></li>
-
+            <% unless current_page?(new_user_session_path) %>
+              <li><%= link_to 'ログイン', new_user_session_path, class: "login" %></li>
+            <% end %>
+            <% unless current_page?(new_user_registration_path) %>
+              <%= link_to '新規登録', new_user_registration_path, class: "sign-up" %></li>
+            <% end %>
           </div>
-        <%end%>
+        <% end %>
       </div>
     </header>
     <%= yield %>

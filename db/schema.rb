@@ -21,7 +21,7 @@ ActiveRecord::Schema.define(version: 2023_06_17_024116) do
     t.date "date", null: false
     t.integer "metabo", null: false
     t.integer "total_cal", null: false
-    t.integer "total_kg", null: false
+    t.decimal "total_kg", precision: 5, scale: 2, null: false
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
