@@ -1,0 +1,55 @@
+<div class="contents row">
+  <div class="container">
+    <h2>ユーザー情報の編集</h2>
+    <%= form_with model: current_user, id: 'edit_user', class: 'edit_user', local: true do |f| %>
+      <%# <%= render "devise/shared/error_messages", model: f.object %>
+
+      <div class="field">
+        <%= f.label :nickname %><br />
+        <%= f.text_field :nickname, value: current_user.nickname, class: "input-default", id: "nickname", placeholder: "例) furima太郎", maxlength: "40" %>
+      </div>
+
+      <div class="field">
+        <%= f.label :email %><br />
+        <%= f.email_field :email, value: current_user.email %>
+      </div>
+
+      <div class="field">
+        <%= f.label :password %>
+        <% if @minimum_password_length %>
+          <em>(<%= @minimum_password_length %>文字以上)</em>
+        <% end %><br />
+        <%= f.password_field :password,value: current_user.password, autocomplete: "off" %>
+      </div>
+
+      <div class="field">
+        <%= f.label :password_confirmation %><br />
+        <%= f.password_field :password_confirmation,value: current_user.password, autocomplete: "off" %>
+      </div>
+
+      <div class="field">
+        <%= f.label :height %><br />
+        <%= f.text_field :height, value: current_user.height, class: "input-default", id: "height", placeholder: "例) 168.5", maxlength: "5" %>
+      </div>
+
+      <div class="field">
+        <%= f.label :weight %><br />
+        <%= f.text_field :weight, value: current_user.weight, class: "input-default", id: "weight", placeholder: "例) 60.5", maxlength: "4" %>
+      </div>
+
+      <div class="field">
+        <%= f.label :age %><br />
+        <%= f.text_field :age, value: current_user.age, class: "input-default", id: "age", placeholder: "例) 20", maxlength: "4" %>
+      </div>
+
+      <div class="field">
+        <%= f.label :sex %><br />
+        <%= f.text_field :sex, value: current_user.sex, class: "input-default", id: "sex", placeholder: "例) 1=男性 2=女性", maxlength: "1" %>
+      </div>
+
+      <div class="actions">
+        <%= f.submit "更新" %>
+      </div>
+    <% end %>
+  </div>
+</div>
