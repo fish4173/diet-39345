@@ -4,11 +4,11 @@
       <div class="image-area">
         <%# 画像を結果により変更する %>
         <% if @diet && @diet.total_kg.positive? %>
-          <%= image_tag '/assets/OIG (4).jpg', alt: 'テスト画像', class: 'image' %>
+          <%= image_tag 'OIG (4).jpg', alt: 'テスト画像', class: 'image' %>
         <% elsif @diet && @diet.total_kg.negative? %>
-          <%= image_tag '/assets/OIG (3).jpg', alt: 'テスト画像', class: 'image' %>
+          <%= image_tag 'OIG (3).jpg', alt: 'テスト画像', class: 'image' %>
         <% else %>
-          <%= image_tag '/assets/ダイエット初期.jpg', alt: 'テスト画像', class: 'image' %>
+          <%= image_tag 'ダイエット初期.jpg', alt: 'テスト画像', class: 'image' %>
         <% end %>
       </div>
       <div class="kcal-answer"></div>
