@@ -31,6 +31,7 @@
 | date                                | integer    | null: false                    |
 | metabo                              | integer    | null: false                    |
 | total-cal                           | integer    | null: false                    |
+| total-kg                            | integer    | null: false                    |
 | user                                | references | null: false, foreign_key: true |
 
 ### Association
