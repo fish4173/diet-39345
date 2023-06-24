@@ -14,10 +14,10 @@ class User < ApplicationRecord
   validates_format_of :password, with: PASSWORD_REGEX, message: 'には英字と数字の両方を含めて設定してください'
 
   validates :height,presence: true,
-  numericality: { only_integer: true, greater_than_or_equal_to: 1, less_than_or_equal_to: 200 ,message: '半角数字で入力してください' }
+  numericality: { greater_than_or_equal_to: 1, less_than_or_equal_to: 300.0, message: 'は1から300.0までの半角数字で入力してください' }
 
   validates :weight,presence: true,
-  numericality: { only_integer: true, greater_than_or_equal_to: 1, less_than_or_equal_to: 200 ,message: '半角数字で入力してください' }
+  numericality: { greater_than_or_equal_to: 1, less_than_or_equal_to: 300.0, message: 'は1から300.0までの半角数字で入力してください' }
 
   validates :age,presence: true,
   numericality: { only_integer: true, greater_than_or_equal_to: 1, less_than_or_equal_to: 200,message: '半角数字で入力してください' }

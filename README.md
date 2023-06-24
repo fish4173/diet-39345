@@ -7,8 +7,8 @@
 | nickname           | string              | null: false,              |
 | email              | string              | null: false,unique: true  |
 | password           | string              | null: false               |
-| height             | integer              | null: false               |
-| weight             | integer              | null: false               |
+| height             | decimal              | null: false               |
+| weight             | decimal              | null: false               |
 | age                | integer              | null: false               |
 | sex                | integer              | null: false               |
 
