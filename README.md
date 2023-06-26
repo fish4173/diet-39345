@@ -30,7 +30,7 @@
   [![Image from Gyazo](https://i.gyazo.com/2c6203c4175bf1134ca7d6cc5c02d959.png)](https://gyazo.com/2c6203c4175bf1134ca7d6cc5c02d959)
 
 # 画面遷移図
-  [![Image from Gyazo](https://i.gyazo.com/0f05fbf3ff93143ba662e7d2a565a1dc.png)](https://gyazo.com/0f05fbf3ff93143ba662e7d2a565a1dc)
+  [![Image from Gyazo](https://i.gyazo.com/a7a82c577ad50be69e996d39b02ae013.png)](https://gyazo.com/a7a82c577ad50be69e996d39b02ae013)
 
 
 # DB 設計
