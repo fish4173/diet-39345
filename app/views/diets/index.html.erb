@@ -109,10 +109,10 @@
 
           <div class='kcal-group'>
             <div class='kcal-input-form'>
-              <label class="form-text">date</label>
-              <span class="indispensable">必須</span>
+              <%# <label class="form-text">date</label>
+              <span class="indispensable">必須</span> %>
             </div>
-            <%= f.date_field :date, class:"input-default", id:"date",value: Date.today %>
+            <%= f.hidden_field :date, class:"input-default", id:"date",value: Date.today %>
           </div>
 
           <div class='kcal-group'>
