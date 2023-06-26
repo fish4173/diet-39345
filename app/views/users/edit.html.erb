@@ -5,7 +5,7 @@
       <%# <%= render "devise/shared/error_messages", model: f.object %>
 
       <div class="field">
-        <%= f.label :nickname %><br />
+        <%= f.label :ニックネーム %><br />
         <%= f.text_field :nickname, value: current_user.nickname, class: "input-default", id: "nickname", placeholder: "例) furima太郎", maxlength: "40" %>
       </div>
 
@@ -15,7 +15,7 @@
       </div>
 
       <div class="field">
-        <%= f.label :password %>
+        <%= f.label :パスワード %>
         <% if @minimum_password_length %>
           <em>(<%= @minimum_password_length %>文字以上)</em>
         <% end %><br />
@@ -23,27 +23,27 @@
       </div>
 
       <div class="field">
-        <%= f.label :password_confirmation %><br />
+        <%= f.label :パスワード再入力 %><br />
         <%= f.password_field :password_confirmation,value: current_user.password, autocomplete: "off" %>
       </div>
 
       <div class="field">
-        <%= f.label :height %><br />
+        <%= f.label :身長 %><br />
         <%= f.text_field :height, value: current_user.height, class: "input-default", id: "height", placeholder: "例) 168.5", maxlength: "5" %>
       </div>
 
       <div class="field">
-        <%= f.label :weight %><br />
+        <%= f.label :体重 %><br />
         <%= f.text_field :weight, value: current_user.weight, class: "input-default", id: "weight", placeholder: "例) 60.5", maxlength: "4" %>
       </div>
 
       <div class="field">
-        <%= f.label :age %><br />
+        <%= f.label :年令 %><br />
         <%= f.text_field :age, value: current_user.age, class: "input-default", id: "age", placeholder: "例) 20", maxlength: "4" %>
       </div>
 
       <div class="field">
-        <%= f.label :sex %><br />
+        <%= f.label :性別 %><br />
         <%= f.text_field :sex, value: current_user.sex, class: "input-default", id: "sex", placeholder: "例) 1=男性 2=女性", maxlength: "1" %>
       </div>
 

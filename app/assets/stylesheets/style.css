@@ -81,6 +81,7 @@ textarea {
 
 .row .grid-6 {
   width: 48.2%;
+  font-weight: bold;
 }
 
 .row .grid-7 {
@@ -130,6 +131,7 @@ body {
 a {
   text-decoration: none;
   color: #666;
+  font-size: 22px;
 }
 
 a:hover {
@@ -589,6 +591,40 @@ align-items: center;
 
 }
 
+.logout{
+  border: 0.25px solid lightgray;
+  display: inline-block; /* 要素をインラインで配置 */
+  white-space: nowrap; /* テキストの改行を禁止 */
+  border-radius:30px;
+  padding: 2px 20px;
+
+}
+
+.login{
+  border: 0.25px solid lightgray;
+  display: inline-block; /* 要素をインラインで配置 */
+  white-space: nowrap; /* テキストの改行を禁止 */
+  border-radius:30px;
+  padding: 2px 20px;
+}
+
+.sign-up{
+  border: 0.25px solid lightgray;
+  display: inline-block; /* 要素をインラインで配置 */
+  white-space: nowrap; /* テキストの改行を禁止 */
+  border-radius:30px;
+  padding: 2px 20px;
+
+}
+.user-edit{
+  margin: 0 40px;
+  border: 0.25px solid lightgray;
+  display: inline-block; /* 要素をインラインで配置 */
+  white-space: nowrap; /* テキストの改行を禁止 */
+  border-radius:30px;
+  padding: 2px 20px;
+}
+
 
 
 .header-navi{
@@ -597,11 +633,7 @@ align-items: center;
 
 }
 
-.user-edit{
-  margin: 0 20px;
 
-
-}
 
 li {
   display: flex;
@@ -609,8 +641,8 @@ li {
   border: 0.25px solid lightgray;
   margin: 0,20px;
 
-
 }
+
 
 
 
