@@ -9,7 +9,12 @@
 
 # テスト用アカウント
   Basic認証パスワード : 2222
+
   Basic認証ID  : admin
+
+  メールアドレス : taro.test@gmail.com
+
+  パスワード : test1234
 
 # 利用方法
   1.ログイン画面から新規登録ボタンをクリックし、アカウントを作成
@@ -23,8 +28,22 @@
 # 洗い出した要件
   https://docs.google.com/spreadsheets/d/1Krxwk8-ZMbQ_VCNQ_EXB1b1AJfwGhJdg6arCEGgS3pY/edit#gid=982722306
 
+# 実装した機能についての画像やGIFおよびその説明
+  ①アカウント登録 or ログイン　※下記画像はアカウント登録画面
+
+  [![Image from Gyazo](https://i.gyazo.com/66b285e0a6172b53dcd4ac2198796b97.png)](https://gyazo.com/66b285e0a6172b53dcd4ac2198796b97)
+
+
+  ②各項目を入力後、登録or上書きボタンをクリック
+
+  ※体重の増減により画像が変化し、画像下部に総カロリーと体重増減結果が表示される。
+  [![Image from Gyazo](https://i.gyazo.com/3175a85898eace73a2bc5ac1df8c9d74.png)](https://gyazo.com/3175a85898eace73a2bc5ac1df8c9d74)
+
+
+
 # 実装予定の機能
   現在、マイページ機能を実装中
+
 
 # データベース設計
   [![Image from Gyazo](https://i.gyazo.com/2c6203c4175bf1134ca7d6cc5c02d959.png)](https://gyazo.com/2c6203c4175bf1134ca7d6cc5c02d959)

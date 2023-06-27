@@ -29,12 +29,12 @@
       </div>
 
       <div class="field">
-        <%= f.label :身長 %><br />
+        <%= f.label :"身長 (数字のみ記載)" %><br />
         <%= f.text_area :height, class:"input-default", id:"height", placeholder:"例) 168.5", maxlength:"5" %>
       </div>
 
       <div class="field">
-        <%= f.label :体重 %><br />
+        <%= f.label :"体重 (数字のみ記載)"%><br />
         <%= f.text_area :weight, class:"input-default", id:"weight", placeholder:"例) 60.5", maxlength:"5" %>
 
       </div>
@@ -53,7 +53,7 @@
 
 
       <div class="actions">
-        <%= f.submit "Sign up" %>
+        <%= f.submit "ユーザー登録" %>
       </div>
     <% end %>
   </div>
